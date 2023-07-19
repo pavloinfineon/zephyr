@@ -1,0 +1,5 @@
+&counter1_0
+{
+	status = "okay";
+	external-trigger-gpios = <&gpio_prt9 0 0>;
+};

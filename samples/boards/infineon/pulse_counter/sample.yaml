@@ -1,0 +1,16 @@
+sample:
+  name: Pulse Counter Driver Example
+tests:
+  sample.board.infineon.pulse_counter:
+    tags: drivers counter
+    harness: console
+    platform_allow: cy8cproto_062_4343w
+    harness_config:
+      type: multi_line
+      ordered: true
+      regex:
+        - "Pulse Counter Sample"
+        - "Set alarm in 10 count"
+        - "!! Alarm !!"
+        - "!! Count = [10|11]"
+    depends_on: counter
